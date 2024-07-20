@@ -21,7 +21,7 @@ const { error, value } = envsSchema.validate({
   ...process.env,
   NATS_SERVERS: process.env.NATS_SERVERS?.split(','),
 });
-if (error) throw new Error(`Config validation error: ${error.message}`);
+if (error) throw new Error(`ORDERS-MS: Config validation error: ${error.message}`);
 
 const envVars: EnvVars = value;
 
